@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require('dotenv').config();
+
 const app = express();
 const port = process.env.PORT || 8000;
 
-require('dotenv').config();
 const registerRoute = require("./routes/SignupRoutes/SignupRoutes");
 const loginRoutes = require("./routes/LoginRoutes/LoginRoutes");
 
@@ -20,13 +21,13 @@ app.get("/", (req, res) => {
 });
 
 // Database connection
-const mongoURI = process.env.MONGO_URI || "mongodb+srv://<username>:<password>@<cluster-address>/<dbname>?retryWrites=true&w=majority";
+const mongoURI = "mongodb+srv://raykushwaha0031:C1k4maJXzH2vAmh4@blog.zlf5agh.mongodb.net/ProjectX";
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000, // Increase this value if necessary
-    socketTimeoutMS: 45000 // Increase this value if necessary
+    serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
+    socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
 }).then(() => {
     console.log("Database connected successfully");
 }).catch((err) => {
