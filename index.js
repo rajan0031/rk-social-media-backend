@@ -6,6 +6,7 @@ const port = process.env.port || 8000;
 
 require('dotenv').config();
 const registerRoute = require("./routes/SignupRoutes/SignupRoutes");
+const loginRoutes = require("./routes/LoginRoutes/LoginRoutes")
 
 
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use("/", registerRoute);
+app.use("/", loginRoutes);
 
 app.get("/", (req, res) => {
     res.send("hello world this is my get route brother");
