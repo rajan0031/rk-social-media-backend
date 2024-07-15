@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 // Database connection
-const mongoURI = process.env.MONGO_URI || "mongodb+srv://raykushwaha0031:C1k4maJXzH2vAmh4@blog.zlf5agh.mongodb.net/ProjectX";
+const mongoURI = process.env.MONGO_URI || "mongodb+srv://raykushwaha0031:C1k4maJXzH2vAmh4@blog.zlf5agh.mongodb.net/Blog";
 
 const connectDB = async () => {
     try {
