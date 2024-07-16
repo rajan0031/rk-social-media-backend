@@ -1,7 +1,6 @@
-const { registerRoute } = require("../../controllers/SignupControllers/SignupControllers");
 
 
-
+const registerRoute =require("../../Controllers/SignupControllers/SignupControllers")
 // ab ek express ka router banawo bhai
 
 

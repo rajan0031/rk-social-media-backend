@@ -1,4 +1,4 @@
-const { loginRoutes } = require("../../controllers/LoginControllers/LoginControllers");
+const { loginRoutes } = require("../../Controllers/LoginControllers/LoginControllers");
 
 
 
