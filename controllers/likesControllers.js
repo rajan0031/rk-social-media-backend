@@ -10,7 +10,8 @@ module.exports.addLikes = async (req, res) => {
         const { currentUserId, blogId, likesCount, likeToggler } = req.body;
         // console.log(currentUserId, blogId, likesCount, likeToggler);
 
-        const existingLikes = await Likes.findOne({ blogId: blogId, currentUserId: currentUserId });
+        const existingLikes = await Likes.findOne({ blogId: blogId, currentUserId: currentUserId }); 
+       
 
         if (existingLikes) {
             // If document with the same blogId already exists, update it
